@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "Washington State Cancer Analysis"
 author: "David Chiang, Nancy Liu, Roy Mosby, Jeff Tu"
 date: "5/16/2020"
 output: html_document
@@ -7,24 +7,38 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+source("../top_cancers.R")
+library(plotly)
 ```
+## Introduction
+In this current pandemic time in the start of 2020 where many people are falling
+victim to COVID-19, we want to raise awareness while educating ourselves on
+the potential health burdens that other diseases can bring to people. Specifically,
+we will narrow down our scope to people affected by cancer in Washington state.
+We will examine how the mortality rates by cancer differ by cause, county,
+gender, and more within the state of Washington.
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+## Relationship Between Cancer and Mortality Rate 
+```{r age, echo = FALSE, message = FALSE}
+ggplotly(top_10_cancers, tooltip = c("text"))
 ```
+In order to measure the serverity of different types of cancer, we can visualize
+the mortality rate of the top 10 cancers using a bar chart. Here, we analyze
+the relationship between the independent variable of type of cancer and the
+dependent variable of mortality rate. The mortality rate measures the number of
+deaths in a particular population, and is expressed here in units of death per
+1,000 individuals per year. The origin of this data source, the Institute for
+Health Metrics and Evaluation (IHME) as referenced in our reference list
+at the end of this page, collected this data from 1980 - 2014. This bar chart
+represents the average of the recorded mortality rate of each case from this
+time period. We see that the highest mortality rate is close to 50 for 
+tracheal, bronchus, and lung cancer. The IHME has categorized these three types
+of cancer into one likely because the symptoms and effects are similar to one
+another. This group leads the mortality rate by cancer by a wide margin with
+most types of cancer having a mortality rate of between 5 and 20. The
+bar chart being left skewed suggests that most cancers do not have a mortality
+rate that drastically differs from one another apart from the lung cancer group.
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## References
+http://ghdx.healthdata.org/record/ihme-data/united-states-cancer-mortality-rates-county-1980-2014?fbclid=IwAR1_4xWKPLDf1Pl5JzD40zDEScrIwCvPGTCmeRRlwtbYDYjR5v1aZIIOLdo
