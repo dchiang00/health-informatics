@@ -8,7 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 source("../top_cancers.R")
-source("mean_mortality.R")
+source("../mean_mortality.R")
 library(plotly)
 ```
 ## Introduction
@@ -45,7 +45,24 @@ rate that drastically differs from one another apart from the lung cancer group.
 ```{r year, echo = FALSE, message = FALSE}
 ggplotly(year_mortality, tooltip = c("text"))
 ```
-We analyzed the mean mortality rates coming from the deadliest cancers. In this case, we compiled the means by using the data from 40 counties in Washington state. From this, we can tell that the overall range of the mortality rates has decreased when comparing the years 1980 and 2014. This decrease in range could be attributed to the fact that new technological advances in imaging, detection, and treatment has allowed for cancer to be detected and treated earlier, allowing for people to survive these cancers. We can see that mortality rates are decreasing for the following cancers: tracheal, bronchus, and lung cancer, colon and rectum cancer, breast cancer, and prostate cancer. These cancers are the most commonly heard of ones, and because of interventions such as campaigns against smoking, a wider set of genetic tests, we can see a drastic decrease in the mortality rates. Other cancers such as pancreatic, leukemia, brain and nervous system, and esophageal remain steady. In some cases such as brain and nervous system cancer, if a tumor grows on an inoperable location, not much intervention could help the patient be cured of this cancer. Thus even with advancements, the mortality rate in these cases does not change significantly. This suggests that while certain types of cancers are seeing a decrease in mortality rates, others are seeing either steady mortality rates or increasing mortality rates.
+We analyzed the mean mortality rates coming from the deadliest cancers. In this 
+case, we compiled the means by using the data from 40 counties in Washington
+state. From this, we can tell that the overall range of the mortality rates has 
+decreased when comparing the years 1980 and 2014. This decrease in range could 
+be attributed to the fact that new technological advances in imaging, detection,
+and treatment has allowed for cancer to be detected and treated earlier, 
+allowing for people to survive these cancers. We can see that mortality rates
+are decreasing for the following cancers: tracheal, bronchus, and lung cancer,
+colon and rectum cancer, breast cancer, and prostate cancer. These cancers are
+the most commonly heard of ones, and because of interventions such as campaigns 
+against smoking, a wider set of genetic tests, we can see a drastic decrease in 
+the mortality rates. Other cancers such as pancreatic, leukemia, brain and 
+nervous system, and esophageal remain steady. In some cases such as brain and 
+nervous system cancer, if a tumor grows on an inoperable location, not much intervention 
+could help the patient be cured of this cancer. Thus even with advancements, the
+mortality rate in these cases does not change significantly. This suggests 
+that while certain types of cancers are seeing a decrease in mortality rates,
+others are seeing either steady mortality rates or increasing mortality rates.
 
 ## References
 http://ghdx.healthdata.org/record/ihme-data/united-states-cancer-mortality-rates-county-1980-2014?fbclid=IwAR1_4xWKPLDf1Pl5JzD40zDEScrIwCvPGTCmeRRlwtbYDYjR5v1aZIIOLdo
