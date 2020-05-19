@@ -41,7 +41,7 @@ most types of cancer having a mortality rate of between 5 and 20. The
 bar chart being left skewed suggests that most cancers do not have a mortality
 rate that drastically differs from one another apart from the lung cancer group.
 
-## Mean Mortality Rates of the top ten Cancers
+## Mean Mortality Rates of the Top Ten Cancers
 ```{r year, echo = FALSE, message = FALSE}
 ggplotly(year_mortality, tooltip = c("text"))
 ```
@@ -64,5 +64,16 @@ mortality rate in these cases does not change significantly. This suggests
 that while certain types of cancers are seeing a decrease in mortality rates,
 others are seeing either steady mortality rates or increasing mortality rates.
 
+## Counties with the Highest Mean Mortality Rates in WA
+```{r year, echo = FALSE, message = FALSE}
+ggplotly(counties_cancer, tooltip = c("text"))
+```
+In order to better understand how cancer affected different counties in WA, we
+looked at the mortality rates for cancer among all the counties in WA from 1980 to
+2014. We compiledthe mean mortality rates for every county in WA, and observed the 
+10 counties with the highest mortality rates. From this we can observe that the 
+county with the greatest mortality rate was Grays Harbor County, with a mortality 
+rate of approximately 15.63%. Aside from Grays Harbor County, the mortality
+rates for the other counties with the highest mortality rates 
 ## References
 http://ghdx.healthdata.org/record/ihme-data/united-states-cancer-mortality-rates-county-1980-2014?fbclid=IwAR1_4xWKPLDf1Pl5JzD40zDEScrIwCvPGTCmeRRlwtbYDYjR5v1aZIIOLdo
