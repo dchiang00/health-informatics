@@ -1,4 +1,4 @@
-# INFO 478 Project Proposal
+# Washington State Cancer Analysis
 ## David Chiang, Nancy Liu, Roy Mosby, Jeff Tu
 ## 5/1/2020
 
