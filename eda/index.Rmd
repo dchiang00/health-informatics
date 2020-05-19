@@ -67,7 +67,7 @@ others are seeing either steady mortality rates or increasing mortality rates.
 
 ## Rates of Top 3 Cancers by Race/Ethnicity 
 ```{r, echo = FALSE, message = FALSE, warning=FALSE}
-ggplotly(cr_plot)
+ggplotly(cr_plot, tooltip = c("text"))
 ```
 With the existence of so many different types of cancers. We wanted to explore
 if a determining factor in cancer incidence could be linked to race/ethnicity.
@@ -79,7 +79,6 @@ results show a significant difference between different ethnic groups and we can
 make an hypothesis that this could be the cause of hereditary genetics. The data
 that was used to create this distribution was made available by the Centers for
 Disease Control and Prevention (CDC).
-
 
 ## References
 http://ghdx.healthdata.org/record/ihme-data/united-states-cancer-mortality-rates-county-1980-2014?fbclid=IwAR1_4xWKPLDf1Pl5JzD40zDEScrIwCvPGTCmeRRlwtbYDYjR5v1aZIIOLdo
