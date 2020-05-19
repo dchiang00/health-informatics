@@ -41,9 +41,9 @@ most types of cancer having a mortality rate of between 5 and 20. The
 bar chart being left skewed suggests that most cancers do not have a mortality
 rate that drastically differs from one another apart from the lung cancer group.
 
-## Mean Mortality Rates of the top ten Cancers
+## Mean Mortality Rate Distribution of Top Ten Cancers
 ```{r year, echo = FALSE, message = FALSE}
-ggplotly(year_mortality, tooltip = c("text"))
+ggplotly(year_mortality)
 ```
 We analyzed the mean mortality rates coming from the deadliest cancers. In this 
 case, we compiled the means by using the data from 40 counties in Washington
