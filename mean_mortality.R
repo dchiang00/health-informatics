@@ -67,8 +67,9 @@ year_mortality <- ggplot(cc, aes(x = year)) +
   geom_line(aes(y = `Liver cancer`, color = "Liver")) +
   geom_line(aes(y = `Brain and nervous system cancer`, color = "Brain and nervous system")) +
   geom_line(aes(y = `Esophageal cancer`, color = "Esophageal")) + 
-  ylab("mean mortality rate") +
-  ggtitle("Mean mortality rates by year")
+  xlab("Year") + 
+  ylab("Mean Mortality Rate") +
+  ggtitle("Mean Mortality Rates by Year")
 
 
 

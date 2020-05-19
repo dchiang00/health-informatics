@@ -1,0 +1,6 @@
+Area,CancerType,Year,Race,Sex,AgeAdjustedRate,CaseCount,Population
+'Washington','Lung and Bronchus','2016','Hispanic','Male and Female',29.2,103,'910145'
+'Washington','Lung and Bronchus','2016','Asian/Pacific Islander','Male and Female',39.7,242,'748086'
+'Washington','Lung and Bronchus','2016','American Indian/Alaska Native','Male and Female',49,51,'166896'
+'Washington','Lung and Bronchus','2016','White','Male and Female',54.1,4025,'5991130'
+'Washington','Lung and Bronchus','2016','Black','Male and Female',56.5,126,'374822'
