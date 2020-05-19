@@ -84,4 +84,3 @@ Disease Control and Prevention (CDC).
 http://ghdx.healthdata.org/record/ihme-data/united-states-cancer-mortality-rates-county-1980-2014?fbclid=IwAR1_4xWKPLDf1Pl5JzD40zDEScrIwCvPGTCmeRRlwtbYDYjR5v1aZIIOLdo
 
 https://gis.cdc.gov/Cancer/USCS/DataViz.html
-
