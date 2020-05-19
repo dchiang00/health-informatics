@@ -19,8 +19,8 @@ In this current pandemic time in the start of 2020 where many people are falling
 victim to COVID-19, we want to raise awareness while educating ourselves on
 the potential health burdens that other diseases can bring to people. Specifically,
 we will narrow down our scope to people affected by cancer in Washington state.
-We will examine how the mortality rates by cancer differ by cause, county,
-gender, and more within the state of Washington.
+We will examine how the mortality rates by cancer differ by county, cause,
+ethnicity, and other factors within the state of Washington.
 
 ## Distribution of Counties with the 10 Highest Mean Mortality Rates
 ```{r counties, echo = FALSE, message = FALSE}
