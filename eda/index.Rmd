@@ -9,6 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 source("../top_cancers.R")
 source("../mean_mortality.R")
+source("../ethnic_rates.R")
 library(plotly)
 ```
 ## Introduction
@@ -64,5 +65,24 @@ mortality rate in these cases does not change significantly. This suggests
 that while certain types of cancers are seeing a decrease in mortality rates,
 others are seeing either steady mortality rates or increasing mortality rates.
 
+## Rates of Top 3 Cancers by Race/Ethnicity 
+```{r, echo = FALSE, message = FALSE, warning=FALSE}
+ggplotly(cr_plot)
+```
+With the existence of so many different types of cancers. We wanted to explore
+if a determining factor in cancer incidence could be linked to race/ethnicity.
+Therefore we decided to create a distribution graph that presents the top 3 rates
+of cancers by race/ethnicity. With Washington state having uneven racial
+demographics, we used a technique called age adjustment, which is used to show
+the rates that would exist if the population had the same distribution. Our
+results show a significant difference between different ethnic groups and we can
+make an hypothesis that this could be the cause of hereditary genetics. The data
+that was used to create this distribution was made available by the Centers for
+Disease Control and Prevention (CDC).
+
+
 ## References
 http://ghdx.healthdata.org/record/ihme-data/united-states-cancer-mortality-rates-county-1980-2014?fbclid=IwAR1_4xWKPLDf1Pl5JzD40zDEScrIwCvPGTCmeRRlwtbYDYjR5v1aZIIOLdo
+
+https://gis.cdc.gov/Cancer/USCS/DataViz.html
+
