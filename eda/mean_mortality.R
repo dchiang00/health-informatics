@@ -43,7 +43,7 @@ cancer_year <- as.data.frame(m)
 names(cancer_year) <- names
 cc <- cancer_year %>% 
   mutate("year" = seq(1980, 2014, 1))
-View(cc)
+# View(cc)
 
 year_mortality <- ggplot(cc, aes(x = year)) +
   scale_colour_manual(name = "Cancer Type",

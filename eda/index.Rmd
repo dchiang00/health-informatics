@@ -24,7 +24,7 @@ gender, and more within the state of Washington.
 ```{r age, echo = FALSE, message = FALSE}
 ggplotly(top_10_cancers, tooltip = c("text"))
 ```
-In order to measure the serverity of different types of cancer, we can visualize
+In order to measure the severity of different types of cancer, we can visualize
 the mortality rate of the top 10 cancers using a bar chart. Here, we analyze
 the relationship between the independent variable of type of cancer and the
 dependent variable of mortality rate. The mortality rate measures the number of
