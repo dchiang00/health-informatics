@@ -3,7 +3,7 @@ library(dplyr)
 library(tidyr)
 
 # Read in data
-data <- read.csv("../data/cancer_WA.csv")
+data <- read.csv("cancer_WA.csv")
 
 #####################################################################
 # filter out neoplasms
