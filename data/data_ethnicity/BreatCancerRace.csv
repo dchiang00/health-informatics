@@ -1,6 +1,0 @@
-Area,CancerType,Year,Race,Sex,AgeAdjustedRate,CaseCount,Population
-'Washington','Female Breast','2016','Asian/Pacific Islander','Male and Female',97.6,404,393868
-'Washington','Female Breast','2016','Hispanic','Male and Female',117,270,439102
-'Washington','Female Breast','2016','Black','Male and Female',121.4,156,175100
-'Washington','Female Breast','2016','American Indian/Alaska Native','Male and Female',128,87,'83129'
-'Washington','Female Breast','2016','White','Male and Female',133.7,5030,'2989596'

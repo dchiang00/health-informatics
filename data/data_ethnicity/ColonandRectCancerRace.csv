@@ -1,6 +1,0 @@
-Area,CancerType,Year,Race,Sex,AgeAdjustedRate,CaseCount,Population
-'Washington','Colon and Rectum','2016','Black','Male and Female',32.4,86,'374822'
-'Washington','Colon and Rectum','2016','Hispanic','Male and Female',32.9,139,'910145'
-'Washington','Colon and Rectum','2016','Asian/Pacific Islander','Male and Female',34.6,229,'748086'
-'Washington','Colon and Rectum','2016','White','Male and Female',35.2,2523,'5991130'
-'Washington','Colon and Rectum','2016','American Indian/Alaska Native','Male and Female',47.3,59,'166896'

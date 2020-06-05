@@ -1,0 +1,6 @@
+Area,CancerType,Year,Race,Sex,AgeAdjustedRate,CaseCount,Population
+Washington,Testis,2012-2016,Black,Male and Female,1.6,16,939293
+Washington,Testis,2012-2016,Asian/Pacific Islander,Male and Female,2.3,44,1621091
+Washington,Testis,2012-2016,Hispanic,Male and Female,5.3,129,2214528
+Washington,Testis,2012-2016,American Indian/Alaska Native,Male and Female,6.2,24,403788
+Washington,Testis,2012-2016,White,Male and Female,7.4,1061,14672919

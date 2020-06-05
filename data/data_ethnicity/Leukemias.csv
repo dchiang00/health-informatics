@@ -1,0 +1,6 @@
+Area,CancerType,Year,Race,Sex,AgeAdjustedRate,CaseCount,Population
+Washington,Leukemias,2012-2016,Asian/Pacific Islander,Male and Female,8.1,247,3437208
+Washington,Leukemias,2012-2016,Hispanic,Male and Female,11.3,308,4276337
+Washington,Leukemias,2012-2016,American Indian/Alaska Native,Male and Female,11.8,77,805294
+Washington,Leukemias,2012-2016,Black,Male and Female,13.5,156,1764381
+Washington,Leukemias,2012-2016,White,Male and Female,15.2,5115,29328109

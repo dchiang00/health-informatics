@@ -1,0 +1,6 @@
+Area,CancerType,Year,Race,Sex,AgeAdjustedRate,CaseCount,Population
+Washington,Colon and Rectum,2012-2016,Asian/Pacific Islander,Male and Female,30.7,917,3437208
+Washington,Colon and Rectum,2012-2016,Hispanic,Male and Female,30.9,575,4276337
+Washington,Colon and Rectum,2012-2016,White,Male and Female,35.2,12187,29328109
+Washington,Colon and Rectum,2012-2016,Black,Male and Female,37.2,432,1764381
+Washington,Colon and Rectum,2012-2016,American Indian/Alaska Native,Male and Female,49.6,262,805294
