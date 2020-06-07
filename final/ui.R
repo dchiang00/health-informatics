@@ -1,12 +1,3 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
 library(ggplot2)
 library(maps)
@@ -23,6 +14,17 @@ shinyUI(
             tabPanel(
                 "Maps",
                 h1("Cancers Sorted by County"),
+                p(
+                  "The selected cancers come from the top cancers in Washington state 
+                  based on the year 2014. After selecting a cancer from the drop down, 
+                  the first chart will give an overview of the selected cancer and
+                  how its mortality rate has changed over time. The interactive maps 
+                  show the difference in mortality rates for each county in Washington 
+                  given a type of cancer and the year. By observing general trends 
+                  over the years and by location, the public and healthcare industry 
+                  can visualize how certain counties may have a higher mortality
+                  rate than others."
+                ),
                 sidebarLayout(
                     sidebarPanel(
                             selectInput(
@@ -33,7 +35,6 @@ shinyUI(
                                     "Colon and Rectum" = 441, 
                                     "Breast" = 429,
                                     "Pancreatic" = 456,
-                                    "Prostate" = 438, 
                                     "Leukemia" = 487, 
                                     "Non-Hodgkin Lymphoma" = 485, 
                                     "Liver" = 417,
@@ -105,6 +106,37 @@ shinyUI(
                   have changed throughout the years.")
                 )
                )
+            ),
+            tabPanel(
+              "Conclusions",
+              h1("Analysis"),
+              h2("How do mortality rates for different cancers change depending on the year?"),
+              p(
+                "From the visualizations, we can see that the trends for 
+                each county are similar to the general trends that occur
+                in Washington state as a whole. As the mortality rate 
+                for a specific cancer decreases in Washington state, the
+                mortality rates also follow a similar trend within the 
+                individual counties. It is worth noting that specific 
+                counties have a mortality rate than other counties, and 
+                during the years 1980 to 2014, the counties with the higher 
+                mortality rates continue to have higher mortality rates as the years
+                progress. This trend also occurs across all sorted sexes, where the
+                mortality rates will remain consistent across the years. It is difficult 
+                to see if there is an exact correlation between the mortality rates of
+                a specific cancer and the county that we are analyzing."
+              ),
+              p(
+                "The counties Gray Harbor, Adams, and San Juan most notably stand out 
+                across the different types of cancer because those counties are on the 
+                extremes of having high mortality rates or low mortality rates compared
+                to the rest of the counties. Generally, there are some splits where 
+                the western side of the state has a higher mortality than the eastern 
+                side of the state. The difference in mortality rates by county could be
+                attributed to geographical location and the difference in lifestyle 
+                habits, access to care, population of the county, or resources 
+                available to the people of the county."
+              )
             )
         )
     )

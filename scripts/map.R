@@ -44,7 +44,7 @@ map_male <- function(df) {
 
 map_female <- function(df) {
   # select female
-  d_f <- df %>% filter(sex == "Male")
+  d_f <- df %>% filter(sex == "Female")
   # plot map 
   plot_usmap(data = d_f, values = "mortality_rate", include = "WA") +
     scale_fill_continuous(low = "white", high = "red", name = "Mortality Rate") +
