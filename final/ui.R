@@ -60,6 +60,51 @@ shinyUI(
                         
                     )
                 )
+            ),
+            # Page for scatterplot
+            tabPanel(
+              "Scatterplot",
+              h1("Linear Regression on the Mortality Rate of Cancers"),
+              sidebarLayout(
+                sidebarPanel(
+                  selectInput(
+                    inputId = "Cancer",
+                    label = "Cancer",
+                    choices = c(
+                      "Tracheal, bronchus, and lung cancer",
+                      "Prostate cancer", 
+                      "Pancreatic cancer",
+                      "Ovarian cancer", 
+                      "Stomach cancer", 
+                      "Uterine cancer",
+                      "Other pharynx cancer",  
+                      "Non-melanoma skin cancer", 
+                      "Thyroid cancer",
+                      "Testicular cancer"
+                    )
+                   )
+                 ),
+                mainPanel(
+                  plotOutput("scatterplot"),
+                  br(),
+                  textOutput("equation"),
+                  textOutput("rsquared"),
+                  br(),
+                  p("This interactive scatterplot analyzes the correlation
+                  between years and mortality rate for the different types of
+                  cancer. The cancers chosen are the ten highest cancers in
+                  terms of mean mortality rate in the United States aggregated
+                  from 1980-2014. Depending on which type of cancer is chosen
+                  from the dropdown menu, the  graph will show a breakdown of
+                  the mortality rate for that particular cancer during each year
+                  in the interval. The intercept, coefficient, and R-squared are
+                  statistical metrics that are helpful in analyzing the strength
+                  of the regression. By observing the relationship between these
+                  metrics, the public and healthcare industry can achieve a better
+                  understanding of how the mortality rates of different cancers
+                  have changed throughout the years.")
+                )
+               )
             )
         )
     )
