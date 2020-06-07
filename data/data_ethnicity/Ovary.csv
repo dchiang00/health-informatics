@@ -1,6 +1,0 @@
-Area,CancerType,Year,Race,Sex,AgeAdjustedRate,CaseCount,Population
-Washington,Ovary,2012-2016,Black,Male and Female,6.6,39,825088
-Washington,Ovary,2012-2016,American Indian/Alaska Native,Male and Female,8.6,27,401506
-Washington,Ovary,2012-2016,Hispanic,Male and Female,9.5,101,2061809
-Washington,Ovary,2012-2016,Asian/Pacific Islander,Male and Female,9.7,175,1816117
-Washington,Ovary,2012-2016,White,Male and Female,11.6,2098,14655190

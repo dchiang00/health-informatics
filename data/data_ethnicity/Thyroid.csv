@@ -1,6 +1,0 @@
-Area,CancerType,Year,Race,Sex,AgeAdjustedRate,CaseCount,Population
-Washington,Thyroid,2012-2016,Black,Male and Female,7.8,116,1764381
-Washington,Thyroid,2012-2016,American Indian/Alaska Native,Male and Female,10.9,74,805294
-Washington,Thyroid,2012-2016,Hispanic,Male and Female,12.9,383,4276337
-Washington,Thyroid,2012-2016,Asian/Pacific Islander,Male and Female,13.2,453,3437208
-Washington,Thyroid,2012-2016,White,Male and Female,13.7,4344,29328109

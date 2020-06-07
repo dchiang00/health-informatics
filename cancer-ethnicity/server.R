@@ -1,8 +1,10 @@
 library(shiny)
 require(knitr)
+library(xtable)
+library(DT)
 
 #source the data
-#source("../ethnic_rates.R")
+source("../ethnic_rates.R")
 
 #filter_cr <-filter_cancer_type("cancer_by_race")
 
@@ -15,20 +17,48 @@ cr <- read.csv("../data/cancer_by_race.csv")
 output$racePlot <- renderPlot({
   cr %>%
     filter(CancerType == input$type) %>%
-    ggplot(aes(x= Race, weight= AgeAdjustedRate)) +
-    geom_bar() +
+    ggplot(aes(reorder(Race,-AgeAdjustedRate), weight= AgeAdjustedRate, fill = Race)) +
+    geom_bar(color="black") +
     theme(axis.text.x = element_text(angle = 30, hjust = 1))+
     xlab("Ethnicity") +
     ylab("Age Adjusted Rate") +
-    labs(title = paste0(input$type," Cancer in Washington State"))
+    labs(title = paste0(input$type," Cancer \n Rate per 100,000 people"))
     
-  
-  
-  #ggplot(cancer_ethnicity) +
-   # aes(x = CancerType, weight = AgeAdjustedRate) +
-    #geom_bar(fill = "#0c4c8a") +
-   # theme_minimal()
-  
 })
 
+# output$topCancerRace <- renderPlot({
+#   cr %>% 
+#     filter(CancerType %in% c("Female Breast","Colon and Rectum","Lung and Bronchus")) %>%
+#   ggplot(aes(factor(CancerType), AgeAdjustedRate, fill = Race,
+#                             text = paste("Cancer: ", CancerType,
+#                                          "<br>Age Adjusted Rate: ", AgeAdjustedRate,
+#                                          "<br>Race: ", Race))) + 
+#     geom_bar(stat="identity", position = "dodge",color ="black") +
+#     ggtitle("Top 3 Cancer Types by Ethnicity") +
+#     xlab("Cancer Type") +
+#     ylab("Age Adjusted Rate")
+# 
+# })
+
+output$raceHighest <- renderDT(
+  #xt <- xtable(highest)
+  #names(xt) <-c("Cancer Type","Ethnicity", "Age Adjusted Rate")
+  #xtable(highest, col.names = c("Cancer Type","Ethnicity", "Age Adjusted Rate"))
+  
+  #knitr::kable(highest, col.names = c("Cancer Type","Ethnicity", "Age Adjusted Rate"))
+  
+  highest,options = list(dom = "t")
+  # work cited
+  #https://rstudio.github.io/DT/shiny.html
+  
+
+
+    )
+
+
 })
+
+
+
+
+
