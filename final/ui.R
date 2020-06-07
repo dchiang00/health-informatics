@@ -64,7 +64,7 @@ shinyUI(
             # Page for scatterplot
             tabPanel(
               "Scatterplot",
-              h1("Linear Regression on the Mortality Rate of Cancers"),
+              h1("Linear Regression on the Mortality Rate of Cancer Over Time"),
               sidebarLayout(
                 sidebarPanel(
                   selectInput(

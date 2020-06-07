@@ -62,7 +62,7 @@ shinyServer(function(input, output) {
         ggplot(data = specific_cancer, aes(x = year, y = avg)) +
             geom_point() +
             geom_smooth(method = "lm", se = FALSE) +
-            labs(title = paste("Correlation between Mortality Rate and Year for",
+            labs(title = paste("Correlation between Year and Mortality Rate for",
                                input$Cancer)) +
             xlab("Year") +
             ylab("Mortality Rate")
@@ -75,10 +75,8 @@ shinyServer(function(input, output) {
         linear_mod <- lm(avg ~ year, data = specific_cancer)
         paste0(
             "Mortality Rate = ",
-            format(round(coef(linear_mod)["(Intercept)"], 2), nsmall = 2), " + ",
-            format(round(coef(linear_mod)["year"], 2), nsmall = 2
-            ),
-            " * Years"
+            format(round(coef(linear_mod)["(Intercept)"], 3), nsmall = 3), " + ",
+            format(round(coef(linear_mod)["year"], 3), nsmall = 3), " * Years"
         )
     })
     
@@ -89,7 +87,7 @@ shinyServer(function(input, output) {
         linear_mod <- lm(avg ~ year, data = specific_cancer)
         paste0(
             "R-squared: ",
-            format(round(summary(linear_mod)$r.squared, 2), nsmall = 2)
+            format(round(summary(linear_mod)$r.squared, 3), nsmall = 3)
         )
     })
 })
