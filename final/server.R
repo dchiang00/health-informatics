@@ -5,12 +5,16 @@ library(maps)
 library(dplyr)
 library(usmap)
 library(leaflet)
+library(DT)
 
+#source the data
 source("../scripts/map.R")
+source("../ethnic_rates.R")
 #source("../scripts/scatterplot.R")
 
 # Read in dataframe
 data <- read.csv("../data/cancer_WA.csv")
+cr <- read.csv("../data/cancer_by_race.csv")
 
 # Filter to the top 10 causes in terms of mortality rate
 top_10_causes <- data %>% 
@@ -82,4 +86,22 @@ shinyServer(function(input, output) {
             format(round(summary(linear_mod)$r.squared, 3), nsmall = 3)
         )
     })
+# creates a bar grpah visual for race/ethncity
+    output$racePlot <- renderPlot({
+      cr %>%
+        filter(CancerType == input$type) %>%
+        ggplot(aes(reorder(Race,-AgeAdjustedRate), weight= AgeAdjustedRate, fill = Race)) +
+        geom_bar(color="black") +
+        theme(axis.text.x = element_text(angle = 30, hjust = 1))+
+        xlab("Ethnicity") +
+        ylab("Age Adjusted Rate") +
+        labs(title = paste0(input$type," Cancer \nRate per 100,000 people"))
+    })
+ # creates a chart using DT   
+    output$raceHighest <- renderDT(
+      highest,options = list(dom = "t")
+      # work cited
+      #https://rstudio.github.io/DT/shiny.html
+    )
+    
 })

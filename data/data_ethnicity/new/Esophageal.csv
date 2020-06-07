@@ -1,0 +1,6 @@
+Area,CancerType,Year,Race,Sex,AgeAdjustedRate,CaseCount,Population
+Washington,Esophagus,2012-2016,Asian/Pacific Islander,Male and Female,1.9,58,3437208
+Washington,Esophagus,2012-2016,Black,Male and Female,2.9,36,1764381
+Washington,Esophagus,2012-2016,Hispanic,Male and Female,3.4,53,4276337
+Washington,Esophagus,2012-2016,American Indian/Alaska Native,Male and Female,5,28,805294
+Washington,Esophagus,2012-2016,White,Male and Female,5,1805,29328109

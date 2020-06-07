@@ -1,16 +1,51 @@
-"","CancerType","Race","AgeAdjustedRate"
-"1","'Colon and Rectum'","'American Indian/Alaska Native'",47.3
-"2","'Colon and Rectum'","'Asian/Pacific Islander'",34.6
-"3","'Colon and Rectum'","'Black'",32.4
-"4","'Colon and Rectum'","'Hispanic'",32.9
-"5","'Colon and Rectum'","'White'",35.2
-"6","'Female Breast'","'American Indian/Alaska Native'",128
-"7","'Female Breast'","'Asian/Pacific Islander'",97.6
-"8","'Female Breast'","'Black'",121.4
-"9","'Female Breast'","'Hispanic'",117
-"10","'Female Breast'","'White'",133.7
-"11","'Lung and Bronchus'","'American Indian/Alaska Native'",49
-"12","'Lung and Bronchus'","'Asian/Pacific Islander'",39.7
-"13","'Lung and Bronchus'","'Black'",56.5
-"14","'Lung and Bronchus'","'Hispanic'",29.2
-"15","'Lung and Bronchus'","'White'",54.1
+"","CancerType","Race","AgeAdjustedRate","CaseCount"
+"1","Brain and Other Nervous System","Black",3.7,56
+"2","Brain and Other Nervous System","Asian/Pacific Islander",4.1,128
+"3","Brain and Other Nervous System","American Indian/Alaska Native",4.4,32
+"4","Brain and Other Nervous System","Hispanic",5.7,167
+"5","Brain and Other Nervous System","White",7.8,2524
+"6","Female Breast","Asian/Pacific Islander",99.7,1827
+"7","Female Breast","Hispanic",101.1,1096
+"8","Female Breast","Black",119.6,709
+"9","Female Breast","American Indian/Alaska Native",128.1,400
+"10","Female Breast","White",136.9,24728
+"11","Colon and Rectum","Asian/Pacific Islander",30.7,917
+"12","Colon and Rectum","Hispanic",30.9,575
+"13","Colon and Rectum","White",35.2,12187
+"14","Colon and Rectum","Black",37.2,432
+"15","Colon and Rectum","American Indian/Alaska Native",49.6,262
+"16","Esophagus","Asian/Pacific Islander",1.9,58
+"17","Esophagus","Black",2.9,36
+"18","Esophagus","Hispanic",3.4,53
+"19","Esophagus","American Indian/Alaska Native",5,28
+"20","Esophagus","White",5,1805
+"21","Prostate","Asian/Pacific Islander",53,641
+"22","Prostate","American Indian/Alaska Native",80.1,210
+"23","Prostate","Hispanic",82.2,602
+"24","Prostate","White",98.7,17652
+"25","Prostate","Black",142.8,876
+"26","Leukemias","Asian/Pacific Islander",8.1,247
+"27","Leukemias","Hispanic",11.3,308
+"28","Leukemias","American Indian/Alaska Native",11.8,77
+"29","Leukemias","Black",13.5,156
+"30","Leukemias","White",15.2,5115
+"31","Liver and Intrahepatic Bile Duct","White",8,3043
+"32","Liver and Intrahepatic Bile Duct","Hispanic",14,247
+"33","Liver and Intrahepatic Bile Duct","Asian/Pacific Islander",15.8,473
+"34","Liver and Intrahepatic Bile Duct","Black",16.6,213
+"35","Liver and Intrahepatic Bile Duct","American Indian/Alaska Native",20.1,124
+"36","Non-Hodgkin Lymphoma","Asian/Pacific Islander",13.8,413
+"37","Non-Hodgkin Lymphoma","Black",16.2,191
+"38","Non-Hodgkin Lymphoma","Hispanic",17.7,335
+"39","Non-Hodgkin Lymphoma","White",20.2,6942
+"40","Non-Hodgkin Lymphoma","American Indian/Alaska Native",21.2,108
+"41","Pancreas","Asian/Pacific Islander",10.5,285
+"42","Pancreas","Hispanic",10.8,159
+"43","Pancreas","White",12.7,4489
+"44","Pancreas","American Indian/Alaska Native",12.9,68
+"45","Pancreas","Black",15.8,161
+"46","Lung and Bronchus","Hispanic",34,485
+"47","Lung and Bronchus","Asian/Pacific Islander",38.7,1055
+"48","Lung and Bronchus","White",56.8,19922
+"49","Lung and Bronchus","Black",57,560
+"50","Lung and Bronchus","American Indian/Alaska Native",61.5,302

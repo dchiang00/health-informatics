@@ -1,0 +1,6 @@
+Area,CancerType,Year,Race,Sex,AgeAdjustedRate,CaseCount,Population
+Washington,Prostate,2012-2016,Asian/Pacific Islander,Male and Female,53,641,1621091
+Washington,Prostate,2012-2016,American Indian/Alaska Native,Male and Female,80.1,210,403788
+Washington,Prostate,2012-2016,Hispanic,Male and Female,82.2,602,2214528
+Washington,Prostate,2012-2016,White,Male and Female,98.7,17652,14672919
+Washington,Prostate,2012-2016,Black,Male and Female,142.8,876,939293

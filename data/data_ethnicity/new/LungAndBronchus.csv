@@ -1,0 +1,6 @@
+Area,CancerType,Year,Race,Sex,AgeAdjustedRate,CaseCount,Population
+Washington,Lung and Bronchus,2012-2016,Hispanic,Male and Female,34,485,4276337
+Washington,Lung and Bronchus,2012-2016,Asian/Pacific Islander,Male and Female,38.7,1055,3437208
+Washington,Lung and Bronchus,2012-2016,White,Male and Female,56.8,19922,29328109
+Washington,Lung and Bronchus,2012-2016,Black,Male and Female,57,560,1764381
+Washington,Lung and Bronchus,2012-2016,American Indian/Alaska Native,Male and Female,61.5,302,805294
