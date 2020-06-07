@@ -3,6 +3,9 @@
 ## 5/1/2020
 
 ## Project Description
+
+View our hosted exploratory data analysis at https://dchiang00.github.io/health-informatics/eda/
+
 **What is the purpose of your research project?**
 Our goal is to raise awareness and educate ourselves on the potential health burdens that cancer can bring to people, while specifically focusing on how deadly different types of cancer can be. 
 
@@ -12,7 +15,7 @@ This first research article aims to characterize the disease burden amongs survi
 
 *Source:* Iadeluca L, Mardekian J, Chander P, Hopps M, Makinson GT. The burden of selected cancers in the US: health behaviors and health care resource utilization. Cancer Manag Res. 2017;9:721‐730. Published 2017 Nov 28. doi:10.2147/CMAR.S143148. Retrieved from URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5713681/
 
-This second article provides an overiew of female breast cancer in the united states and includes data on incidence, mortality, and survival. It was discovered that the probability to develop breast cancer amongst women increases by age.In addition it was discovered non hispanic white women had the overall highest incidence rate of breast cancer. However, African-American women ages 40 to 50 have a higher incidence of breast cancer than white women.
+This second article provides an overiew of female breast cancer in the United States and includes data on incidence, mortality, and survival. It was discovered that the probability to develop breast cancer amongst women increases by age.In addition it was discovered non hispanic white women had the overall highest incidence rate of breast cancer. However, African-American women ages 40 to 50 have a higher incidence of breast cancer than white women.
 
 *Source:* DeSantis, C. E., Ma, J., Sauer, A. G., Newman, L. A., & Jemal, A. (2017, October 3). Breast cancer statistics, 2017, racial disparity in mortality by state. Retrieved from URL: https://acsjournals.onlinelibrary.wiley.com/doi/10.3322/caac.21412 
 
