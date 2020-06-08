@@ -10,7 +10,18 @@ library(DT)
 
 #page for intro
 page_one <- tabPanel("Introduction",
-                     p("lets include intro and sources here????, or this can be optional>? "))
+                     p("In this time amidst the COVID-19 pandemic, we wanted
+                       to educate ourselves and others about the health burdens
+                       that diseases can bring to people. We wanted to focus our
+                       analysis specifically on cancer, which is currently the 
+                       leading cause of death in the United States. Through our 
+                       research and analysis of cancer data in Washington, we hope 
+                       to create awareness for other people who want to understand 
+                       more about the different ways that cancer affects people 
+                       in Washington State. We will be examining how cancer mortality
+                       rates differ by county, the correlation between mortality 
+                       rates and time, and the relationship between mortality rates 
+                       and race."))
 
 
 #page for maps
