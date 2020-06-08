@@ -9,7 +9,7 @@ page_one <- tabPanel("Introduction",
 
 # Page for maps
 page_two <- tabPanel(
-  "Maps",
+  "Mortality Rate by County",
   h1("Cancers Sorted by County"),
   p(
     "The selected cancers come from the top cancers in Washington state
@@ -62,7 +62,7 @@ page_two <- tabPanel(
 
 # Page for scatterplot
 page_three <- tabPanel(
-  "Scatterplot",
+  "Modeling Mortality",
   h1("Linear Regression on the Mortality Rate of Cancer Over Time"),
   sidebarLayout(
     sidebarPanel(selectInput(
@@ -89,7 +89,7 @@ page_three <- tabPanel(
       br(),
       p(
         "This interactive scatterplot analyzes the correlation
-        between years and mortality rate for the different types of
+        between year and mortality rate for the different types of
         cancer. The cancers chosen are the ten highest cancers in
         terms of mean mortality rate in the United States aggregated
         from 1980-2014. Depending on which type of cancer is chosen
@@ -109,7 +109,7 @@ page_three <- tabPanel(
 # Page for demograpahics
 page_four <- tabPanel(
   "Demographics",
-  h2("How does various Cancer types affect Different Ethnic Groups"),
+  h2("How does various Cancer types affect Different Ethnic Groups?"),
   # label for the tab in the navbar
   sidebarLayout(sidebarPanel(
     selectInput(
@@ -196,7 +196,7 @@ page_five <- tabPanel(
 
 ui <- navbarPage(
   theme = shinytheme("flatly"),
-  "Cancer Analysis",
+  "Washington State Cancer Analysis",
   page_one,
   page_two,
   page_three,
