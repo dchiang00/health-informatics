@@ -90,7 +90,7 @@ shinyServer(function(input, output) {
     cr %>%
       filter(CancerType == input$type) %>%
       ggplot(aes(
-        reorder(Race, -AgeAdjustedRate),
+        reorder(Race,-AgeAdjustedRate),
         weight = AgeAdjustedRate,
         fill = Race
       )) +
@@ -100,17 +100,19 @@ shinyServer(function(input, output) {
       ylab("Age Adjusted Rate") +
       labs(title = paste0(input$type, " Cancer \nRate per 100,000 people"))
   })
-
+  
   
   output$wacounties <- renderImage({
-    return(list(
-    src="../images/countiesMap.gif",
-    align = "center",
-    height=500,
-    width=850,
-    alt = "WA Counties"
-  ))
-  },deleteFile = FALSE)})
-                                 
+    return(
+      list(
+        src = "../images/countiesMap.gif",
+        align = "center",
+        height = 500,
+        width = 850,
+        alt = "WA Counties"
+      )
+    )
+  }, deleteFile = FALSE)
+})
 
-  
+
