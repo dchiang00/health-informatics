@@ -1,6 +1,11 @@
-library(shiny)
 library(shinythemes)
-library(stringr)
+library(shiny)
+library(ggplot2)
+library(maps)
+library(dplyr)
+library(usmap)
+library(leaflet)
+library(DT)
 
 # Page for introduction
 page_one <- tabPanel(
@@ -26,9 +31,8 @@ page_one <- tabPanel(
   p("Our target audience is people who are interesting in learning more about the 
     health burdens and effects of cancer in Washington. There are certain cancers 
     that are more prominent such as lung and breast cancer, our goal is for our research
-    to help raise awareness for cancers that may be less common, but still affect
-    many people. Not everyone starts off knowing about the different types of, so
-    we hope our project offers people the opportunity to learn more 
+    to help raise awareness for cancers that may be less common, but still affect many people. 
+    Not everyone starts off knowing about the different types of, so we hope our project offers people the opportunity to learn more 
     about the effects of cancer. In this project, the audience will learn about 
     the prevalence of different cancers in Washington state, and how they affect 
     different groups of people."),
@@ -51,7 +55,7 @@ page_one <- tabPanel(
     rates for type and sex at the county level for all states in the US. This data was compiled by
     IMHE by utilizing data from death records from the National Center for Health Statistics, and
     population counts from the US Census Bureau, NCHS and Human Mortality Database to estimating prevalence."),
-  tags$li(tags$a(href="http://ghdx.healthdata.org/record/ihme-data/united-states-cancer-mortality-rates-county-1980-2014","United States Cancer Mortality Rates by County 1980-2014")),
+  tags$li(a(href="http://ghdx.healthdata.org/record/ihme-data/united-states-cancer-mortality-rates-county-1980-2014.html","United States Cancer Mortality Rates by County 1980-2014")),
   br(),
   p("This data set includes information about cancer statistics from the Center for Disease Control(CDC),
     including information about mortality rates for different types of cancers. The datasets cover 

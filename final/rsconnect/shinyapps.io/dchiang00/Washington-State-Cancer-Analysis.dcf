@@ -1,0 +1,12 @@
+name: Washington-State-Cancer-Analysis
+title: Washington-State-Cancer-Analysis
+username:
+account: dchiang00
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2429378
+bundleId: 3245959
+url: https://dchiang00.shinyapps.io/Washington-State-Cancer-Analysis/
+when: 1591682805.73809
+asMultiple: FALSE
+asStatic: FALSE
