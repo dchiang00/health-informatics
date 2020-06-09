@@ -4,7 +4,8 @@
 
 ## Project Description
 
-View our hosted exploratory data analysis at https://dchiang00.github.io/health-informatics/eda/
+View our final interactive web application at https://dchiang00.shinyapps.io/Washington-State-Cancer-Analysis/
+View our initial exploratory data analysis at https://dchiang00.github.io/health-informatics/eda/
 
 **What is the purpose of your research project?**
 Our goal is to raise awareness and educate ourselves on the potential health burdens that cancer can bring to people, while specifically focusing on how deadly different types of cancer can be. 
