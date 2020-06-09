@@ -101,7 +101,6 @@ shinyServer(function(input, output) {
       labs(title = paste0(input$type, " Cancer \nRate per 100,000 people"))
   })
   
-  
   output$wacounties <- renderImage({
     return(
       list(
@@ -113,5 +112,3 @@ shinyServer(function(input, output) {
     )
   }, deleteFile = FALSE)
 })
-
-

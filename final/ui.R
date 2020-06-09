@@ -1,12 +1,5 @@
 library(shiny)
-library(ggplot2)
-library(maps)
-library(dplyr)
-library(usmap)
-library(leaflet)
 library(shinythemes)
-library(DT)
-
 
 #page for intro
 page_one <- tabPanel(
@@ -27,7 +20,7 @@ page_one <- tabPanel(
                        and race."
   ),
   fluidRow(
-    align = "right",
+    align = "center",
     imageOutput(outputId = "wacounties")),
     
     h2("Limitations"),
@@ -266,13 +259,10 @@ page_four <- tabPanel(
       ),
       selected = "Female Breast"
     )
-    
   ),
-  
-  mainPanel(plotOutput("racePlot")))
+  mainPanel(plotOutput("racePlot")),
+  br())
 )
-
-
 
 ui <- navbarPage(
   theme = shinytheme("flatly"),
