@@ -5,14 +5,15 @@ library(dplyr)
 library(usmap)
 library(leaflet)
 library(DT)
+library(stringr)
 
 # Source the data
-source("../scripts/map.R")
-source("../ethnic_rates.R")
+# source("ethnic_rates.R")
+source("map.R")
 
 # Read in dataframe
-data <- read.csv("../data/cancer_WA.csv")
-cr <- read.csv("../data/cancer_by_race.csv")
+data <- read.csv("cancer_WA.csv")
+cr <- read.csv("cancer_by_race.csv")
 
 # Filter to the top 10 causes in terms of mortality rate
 top_10_causes <- data %>%
@@ -106,7 +107,7 @@ shinyServer(function(input, output) {
   output$wacounties <- renderImage({
     return(
       list(
-        src = "../images/countiesMap.gif",
+        src = "countiesmap.gif",
         align = "center",
         alt = "WA Counties"
       )

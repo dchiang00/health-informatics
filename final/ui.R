@@ -1,5 +1,6 @@
 library(shiny)
 library(shinythemes)
+library(stringr)
 
 # Page for introduction
 page_one <- tabPanel(

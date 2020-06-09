@@ -1,0 +1,12 @@
+name: final
+title: final
+username:
+account: nliux
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2429441
+bundleId: 3245894
+url: https://nliux.shinyapps.io/final/
+when: 1591681822.53393
+asMultiple: FALSE
+asStatic: FALSE

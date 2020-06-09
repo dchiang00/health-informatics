@@ -3,7 +3,7 @@ library(dplyr)
 
 
 # Read in data
-cre <- read.csv("../data/cancer_by_race.csv")
+cre <- read.csv("cancer_by_race.csv")
 
 cr_plot <- ggplot(cre, aes(factor(CancerType), AgeAdjustedRate, fill = Race,
                           text = paste("Cancer: ", CancerType,

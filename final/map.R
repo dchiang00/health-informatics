@@ -2,13 +2,14 @@ library(ggplot2)
 library(maps)
 library(dplyr)
 library(usmap)
+library(stringr)
 
-data <- read.csv("../data/cancer_WA.csv")
+data <- read.csv("cancer_WA.csv")
 #####################################################################################
 
 # a = year, b = cancer code
 cleanse_data <- function(a, b) {
-  data <- read.csv("../data/cancer_WA.csv")
+  data <- read.csv("cancer_WA.csv")
   a <- as.numeric(a)
   b <- as.numeric(b)
   # filter to only include only specific year and cancer
@@ -56,7 +57,7 @@ map_female <- function(df) {
 
 # plot by cause for all years 1980-2014
 plot_by_year <- function(b) {
-  data <- read.csv("../data/cancer_WA.csv")
+  data <- read.csv("cancer_WA.csv")
   # filter to only include WA number and cancer
   wa <- data %>%
     rename(fips = FIPS) %>% 
