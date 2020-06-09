@@ -26,8 +26,23 @@ page_one <- tabPanel(
                        rates and time, and the relationship between mortality rates
                        and race."
   ),
-  mainPanel(align = "right",
-            imageOutput(outputId = "wacounties"))
+  mainPanel(
+    align = "right",
+    imageOutput(outputId = "wacounties"),
+    
+    h2("Limitations"),
+    p(
+      "As we researched the health burdens and impact of cancer in Washington State, 
+      we realized that there were some limitations to the data that
+                     we were analyzing. One of the datasets pertaining to ethnicity and death rates 
+                     was incomplete, which limited the different statistics that we could analyze.Additionally, we had to
+                     merge multiple different datasets to accomodate for missing data in order to build appropriate insights
+                     and analysis. Additionally, some of the datasets were not as updated as we would have liked, which prompted
+                     us to look at how the mortality rates have changed over time, and gain a better understanding of how
+                     mortality rates might continue to change. We were especially interested in how our analysis would change
+                     as cancer data continues to be updated. "
+    )
+  )
 )
 
 
