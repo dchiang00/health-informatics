@@ -21,13 +21,22 @@ page_one <- tabPanel(
   ),
   fluidRow(align = "center",
            imageOutput(outputId = "wacounties")),
+  h1("What is our Goal?"),
+  p("Our target audience is people who are interesting in learning more about the 
+    health burdens and effects of cancer in Washington. There are certain cancers 
+    that are more prominent such as lung and breast cancer, our goal is for our research
+    to help raise awareness for cancers that may be less common, but still affect many people. 
+    Not everyone starts off knowing about the different types of, so we hope our project offers people the opportunity to learn more 
+    about the effects of cancer. In this project, the audience will learn about 
+    the prevalence of different cancers in Washington state, and how they affect 
+    different groups of people."),
   
-  h2("Limitations"),
+  h1("Limitations"),
   p(
-    "As we researched the health burdens and impact of cancer in Washington State,
+    "As we researched the health burdens and impact of cancer in Washington state,
     we realized that there were some limitations to the data that we were analyzing.
     One of the datasets pertaining to ethnicity and death rates was incomplete,
-    which limited the different statistics that we could analyze.Additionally, we
+    which limited the different statistics that we could analyze. Additionally, we
     had to merge multiple different datasets to accomodate for missing data in order
     to build appropriate insights and analysis. Additionally, some of the datasets were
     not as updated as we would have liked, which prompted us to look at how the mortality
@@ -35,11 +44,25 @@ page_one <- tabPanel(
     rates might continue to change. We were especially interested in how our analysis
     would change as cancer data continues to be updated. "
   ),
-  h3("Created by"),
+  h1("Data Resources"),
+  p("This data set includes information from 1980 to 2014 about 29 different cancers, the mortality 
+    rates for type and sex at the county level for all states in the US. This data was compiled by
+    IMHE by utilizing data from death records from the National Center for Health Statistics, and
+    population counts from the US Census Bureau, NCHS and Human Mortality Database to estimating prevalence."),
+  tags$li(tags$a(href="ghdx.healthdata.org/record/ihme-data/united-states-cancer-mortality-rates-county-1980-2014","United States Cancer Mortality Rates by County 1980-2014")),
+  br(),
+  p("This data set includes information about cancer statistics from the Center for Disease Control(CDC),
+    including information about mortality rates for different types of cancers. The datasets cover 
+    information about cancer prevalence among different genders, states, and types of cancer."),
+  tags$li(tags$a(href="gis.cdc.gov/Cancer/USCS/DataViz.html","USCS Data Visualizations-CDC")),
+  
+  
+  h3("Created by:"),
   tags$li("David Chiang"),
   tags$li("Roy Mosby"),
   tags$li("Jeff Tu"),
-  tags$li("Nancy Liu")
+  tags$li("Nancy Liu"),
+  br()
 )
 
 # Page for maps
@@ -92,7 +115,8 @@ page_two <- tabPanel(
       plotOutput("map_female")
       
     )
-  )
+  ),
+  br(),
 )
 
 # Page for scatterplot
@@ -150,7 +174,7 @@ page_four <- tabPanel(
       a determining factor in the rate of new cancers could be linked to ethnicity/race.
       We believe it helps to understand these statistics, so that you can better determine
       your own personal risk. Therefore, we decided to create a visualization that enables
-      the user to select from the top 10 cancer types in Washington State based on the
+      the user to select from the top 10 cancer types in Washington state based on the
       year 2014. The interactive bar chart below shows the difference in incidence
       rates for each ethnicity/race in Washington given a type of cancer. Our methodology
       for creating this visualization included merging multiple tables of ethnicity and
@@ -176,14 +200,15 @@ page_four <- tabPanel(
       selected = "Female Breast"
     )
   ),
-  mainPanel(plotOutput("racePlot")))
+  mainPanel(plotOutput("racePlot"))),
+  br()
 )
 
 # Page for conclusion
 page_five <- tabPanel(
   "Conclusion",
-  h2(
-    "How do Mortality Rates for Different Cancers Change Depending on the Year?"
+  h3(
+    "How do mortality rates for different cancers change depending on the year?"
   ),
   p(
     "From the visualizations, we can see that the trends for
@@ -211,7 +236,7 @@ page_five <- tabPanel(
     habits, access to care, population of the county, or resources
     available to the people of the county."
   ),
-  h2("How well can we Predict how Mortality Rate will Change over Time?"),
+  h3("How well can we predict how mortality rates will change over time?"),
   p(
     "The linear regression model can be analyzed to determine how mortality
     rate will change over time for the different types of cancers. We can analyze
@@ -246,7 +271,7 @@ page_five <- tabPanel(
     changed over the years from 1980-2014, the data points can still be volatile
     and the regression model may change as more data becomes available."
   ),
-  h2("How does Various Cancer Types Affect Different Ethnic Groups?"),
+  h3("How do various cancer types affect different ethnic groups?"),
   p(
     "Based on our visualization we can determine that Prostate cancer has the
     highest incidence rate amongst the top 10 cancers in Washington state. In
@@ -261,7 +286,7 @@ page_five <- tabPanel(
     had the lowest cancer incidences in seven out of ten cancer types. Our analysis
     shows that there is a big difference in how someone's ethnicity/race
     can increase or decrease the risk of them developing cancer."
-  ),
+  ),br(),
 )
 
 # Navbar lyaout

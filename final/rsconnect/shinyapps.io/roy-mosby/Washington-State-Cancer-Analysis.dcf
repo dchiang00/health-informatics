@@ -1,0 +1,12 @@
+name: Washington-State-Cancer-Analysis
+title: Washington-State-Cancer-Analysis
+username:
+account: roy-mosby
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2429349
+bundleId: 3245624
+url: https://roy-mosby.shinyapps.io/Washington-State-Cancer-Analysis/
+when: 1591676395.32944
+asMultiple: FALSE
+asStatic: FALSE
