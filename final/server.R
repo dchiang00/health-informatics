@@ -100,9 +100,7 @@ shinyServer(function(input, output) {
       ylab("Age Adjusted Rate") +
       labs(title = paste0(input$type, " Cancer \nRate per 100,000 people"))
   })
-  # Creates a chart using DT
-  # Work cited https://rstudio.github.io/DT/shiny.html)
-  output$raceHighest <- renderDT(highest, options = list(dom = "t"))
+
   
   output$wacounties <- renderImage({
     return(list(

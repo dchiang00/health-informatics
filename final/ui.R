@@ -31,7 +31,7 @@ page_one <- tabPanel("Introduction",
 
 #page for maps
 page_two <- tabPanel(
-  "Maps",
+  "Mortality Rate by County",
   h1("Cancers Sorted by County"),
   p(
     "The selected cancers come from the top cancers in Washington state
@@ -84,7 +84,7 @@ page_two <- tabPanel(
 
 # Page for scatterplot
 page_three <- tabPanel(
-  "Scatterplot",
+  "Modeling Mortality",
   h1("Linear Regression on the Mortality Rate of Cancer Over Time"),
   sidebarLayout(
     sidebarPanel(selectInput(
@@ -160,15 +160,44 @@ page_five <- tabPanel(
     attributed to geographical location and the difference in lifestyle
     habits, access to care, population of the county, or resources
     available to the people of the county."
-  )
+  ),
+  h2(
+    "How does Various Cancer Types Affect Different Ethnic Groups?"
+  ),
+  p(
+    "Based on our visualization we can determine that Prostate cancer has the 
+    highest incidence rate amongst the top 10 cancers in Washington state. In 
+    addition, African Americans have the highest incidence risk of developing 
+    Prostate cancer over other ethnicities. African Americans also have the 
+    highest risk of developing Pancreas cancer as well. Next, we can determine
+    that American Indians/Alaskan Natives have the highest risk of developing
+    the following cancers: Colon and Rectum, Liver, Non-Hodgkin Lymphoma, Lung 
+    and Bronchus, and Esophagus. Finally, White people have the highest risk of 
+    developing cancers, such as – Brain and Nervous System, Breast, Leukemias,
+    and Esophagus. Also, it was interesting to discover that Asian/Pacific islanders
+    had the lowest cancer incidences in seven out of ten cancer types. Our analysis
+    shows that there is a big difference in how someone’s ethnicity/race 
+    can increase or decrease the risk of them developing cancer."
+  ),
   )
 
 
 #page for demograpahics 
   page_four <- tabPanel(
     "Demographics",
-    h1("How does various cancer types affect different ethnic groups"),
-    # label for the tab in the navbar
+    h1("Cancers Sorted by Ethnicity/Race"),
+    p(
+      "With the existence of so many types of cancers, we wanted to explore if 
+      a determining factor in the rate of new cancers could be linked to ethnicity/race. 
+      We believe it helps to understand these statistics, so that you can better determine 
+      your own personal risk. Therefore, we decided to create a visualization that enables 
+      the user to select from the top 10 cancer types in Washington State based on the 
+      year 2014. The interactive bar chart below shows the difference in incidence 
+      rates for each ethnicity/race in Washington given a type of cancer. Our methodology 
+      for creating this visualization included merging multiple tables of ethnicity and 
+      gender data , and using a technique called age adjustment rate to show the rates 
+      that would exist if the population demographic had the same distribution."
+    ),
     sidebarLayout(sidebarPanel(
       selectInput(
         "type",
@@ -190,30 +219,9 @@ page_five <- tabPanel(
       
     ),
     
-    mainPanel(plotOutput("racePlot"))),
-    
-    h2("Background", align = "center"),
-    p(
-      "With the existence of so many types of cancers. We wanted to explore if a determining factor in the rate of new
-      cancers could be linked to race/ethnicity. Therefore we decided to create a visualization that enables the user to select from
-      the top 10 cancer types in Washington State. With the state having an uneven demogrpahic, we used a technique called
-      age adjustment rate, which is used to show the rates that would exist if the population demographic had the same distrubtion.",
-      align = "center"
-    ),
-    h2("Results", align = "center"),
-    p(
-      "The chart below shows the top cancer types and the ethnicty that has the highest age adjusted rate associated with the type of cancer.
-      Based on our visualization we can determine that prostate cancer has the highest incidence rate. This could be due to the fact the american population(baby-bommers) are
-      reaching older age(Older men are at higher risk). In additon, We can see that prostate cancer has the highest age adjusted rate for African Amercian men. This could be
-      caused by genetics and they should probably be screened for prostrate cancer more proactively  ",
-      align = "center"
-    ),
-    mainPanel(DTOutput("raceHighest"))
-  )
-
-
-
-
+    mainPanel(plotOutput("racePlot"))))
+  
+ 
   
 ui <- navbarPage(theme = shinytheme("flatly"),
                  "Cancer Analysis",
