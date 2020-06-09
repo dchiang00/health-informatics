@@ -260,7 +260,7 @@ page_four <- tabPanel(
 
 ui <- navbarPage(
   theme = shinytheme("flatly"),
-  "Cancer Analysis",
+  "Washington State Cancer Analysis",
   page_one,
   page_two,
   page_three,
