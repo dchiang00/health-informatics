@@ -85,7 +85,8 @@ shinyServer(function(input, output) {
     paste0("R-squared: ",
            format(round(summary(linear_mod)$r.squared, 3), nsmall = 3))
   })
-  # creates a bar grpah visual for race/ethncity
+  
+  # Creates a bar grpah visual for race/ethncity
   output$racePlot <- renderPlot({
     cr %>%
       filter(CancerType == input$type) %>%
@@ -101,6 +102,7 @@ shinyServer(function(input, output) {
       labs(title = paste0(input$type, " Cancer \nRate per 100,000 people"))
   })
   
+  # Counties picture
   output$wacounties <- renderImage({
     return(
       list(

@@ -1,46 +1,48 @@
 library(shiny)
 library(shinythemes)
 
-#page for intro
+# Page for introduction
 page_one <- tabPanel(
   "Introduction",
   h1("Introduction"),
   p(
     "In this time amidst the COVID-19 pandemic, we wanted
-                       to educate ourselves and others about the health burdens
-                       that diseases can bring to people. We wanted to focus our
-                       analysis specifically on cancer, which is currently the
-                       leading cause of death in the United States. Through our
-                       research and analysis of cancer data in Washington, we hope
-                       to create awareness for other people who want to understand
-                       more about the different ways that cancer affects people
-                       in Washington State. We will be examining how cancer mortality
-                       rates differ by county, the correlation between mortality
-                       rates and time, and the relationship between mortality rates
-                       and race."
+     to educate ourselves and others about the health burdens
+     that diseases can bring to people. We wanted to focus our
+     analysis specifically on cancer, which is currently the
+     leading cause of death in the United States. Through our
+     research and analysis of cancer data in Washington, we hope
+     to create awareness for other people who want to understand
+     more about the different ways that cancer affects people
+     in Washington state. We will be examining how cancer mortality
+     rates differ by county, the correlation between mortality
+     rates and time, and the relationship between mortality rates
+     and race."
   ),
-  fluidRow(
-    align = "center",
-    imageOutput(outputId = "wacounties")),
-    
-    h2("Limitations"),
-    p(
-      "As we researched the health burdens and impact of cancer in Washington State, 
-      we realized that there were some limitations to the data that
-                     we were analyzing. One of the datasets pertaining to ethnicity and death rates 
-                     was incomplete, which limited the different statistics that we could analyze.Additionally, we had to
-                     merge multiple different datasets to accomodate for missing data in order to build appropriate insights
-                     and analysis. Additionally, some of the datasets were not as updated as we would have liked, which prompted
-                     us to look at how the mortality rates have changed over time, and gain a better understanding of how
-                     mortality rates might continue to change. We were especially interested in how our analysis would change
-                     as cancer data continues to be updated. "
-    )
-  )
+  fluidRow(align = "center",
+           imageOutput(outputId = "wacounties")),
+  
+  h2("Limitations"),
+  p(
+    "As we researched the health burdens and impact of cancer in Washington State,
+    we realized that there were some limitations to the data that we were analyzing.
+    One of the datasets pertaining to ethnicity and death rates was incomplete,
+    which limited the different statistics that we could analyze.Additionally, we
+    had to merge multiple different datasets to accomodate for missing data in order
+    to build appropriate insights and analysis. Additionally, some of the datasets were
+    not as updated as we would have liked, which prompted us to look at how the mortality
+    rates have changed over time, and gain a better understanding of how mortality
+    rates might continue to change. We were especially interested in how our analysis
+    would change as cancer data continues to be updated. "
+  ),
+  h3("Created by"),
+  tags$li("David Chiang"),
+  tags$li("Roy Mosby"),
+  tags$li("Jeff Tu"),
+  tags$li("Nancy Liu")
+)
 
-
-
-
-#page for maps
+# Page for maps
 page_two <- tabPanel(
   "Mortality Rate by County",
   h1("Cancers Sorted by County"),
@@ -139,7 +141,45 @@ page_three <- tabPanel(
   )
 )
 
+# Page for demograpahics
+page_four <- tabPanel(
+  "Demographics",
+  h1("Cancers Sorted by Ethnicity/Race"),
+  p(
+    "With the existence of so many types of cancers, we wanted to explore if
+      a determining factor in the rate of new cancers could be linked to ethnicity/race.
+      We believe it helps to understand these statistics, so that you can better determine
+      your own personal risk. Therefore, we decided to create a visualization that enables
+      the user to select from the top 10 cancer types in Washington State based on the
+      year 2014. The interactive bar chart below shows the difference in incidence
+      rates for each ethnicity/race in Washington given a type of cancer. Our methodology
+      for creating this visualization included merging multiple tables of ethnicity and
+      gender data, and using a technique called age adjustment rate to show the rates
+      that would exist if the population demographic had the same distribution."
+  ),
+  sidebarLayout(sidebarPanel(
+    selectInput(
+      "type",
+      label = h3("Cancer Type"),
+      choices = list(
+        "Brain and Nervous System" = "Brain and Other Nervous System",
+        "Breast Cancer" = "Female Breast",
+        "Colon and Rectum" = "Colon and Rectum",
+        "Esophagus" = "Esophagus",
+        "Prostate" = "Prostate",
+        "Leukemias" = "Leukemias",
+        "Liver" = "Liver and Intrahepatic Bile Duct",
+        "Non-Hodgkin Lymphoma" = "Non-Hodgkin Lymphoma",
+        "Pancreas" = "Pancreas",
+        "Lung and Bronchus" = "Lung and Bronchus"
+      ),
+      selected = "Female Breast"
+    )
+  ),
+  mainPanel(plotOutput("racePlot")))
+)
 
+# Page for conclusion
 page_five <- tabPanel(
   "Conclusion",
   h2(
@@ -171,7 +211,7 @@ page_five <- tabPanel(
     habits, access to care, population of the county, or resources
     available to the people of the county."
   ),
-  h2("How Well can We Predict how Mortality Rate will Change Over Time?"),
+  h2("How well can we Predict how Mortality Rate will Change over Time?"),
   p(
     "The linear regression model can be analyzed to determine how mortality
     rate will change over time for the different types of cancers. We can analyze
@@ -224,45 +264,7 @@ page_five <- tabPanel(
   ),
 )
 
-
-#page for demograpahics
-page_four <- tabPanel(
-  "Demographics",
-  h1("Cancers Sorted by Ethnicity/Race"),
-  p(
-    "With the existence of so many types of cancers, we wanted to explore if
-      a determining factor in the rate of new cancers could be linked to ethnicity/race.
-      We believe it helps to understand these statistics, so that you can better determine
-      your own personal risk. Therefore, we decided to create a visualization that enables
-      the user to select from the top 10 cancer types in Washington State based on the
-      year 2014. The interactive bar chart below shows the difference in incidence
-      rates for each ethnicity/race in Washington given a type of cancer. Our methodology
-      for creating this visualization included merging multiple tables of ethnicity and
-      gender data, and using a technique called age adjustment rate to show the rates
-      that would exist if the population demographic had the same distribution."
-  ),
-  sidebarLayout(sidebarPanel(
-    selectInput(
-      "type",
-      label = h3("Cancer Type"),
-      choices = list(
-        "Brain and Nervous System" = "Brain and Other Nervous System",
-        "Breast Cancer" = "Female Breast",
-        "Colon and Rectum" = "Colon and Rectum",
-        "Esophagus" = "Esophagus",
-        "Prostate" = "Prostate",
-        "Leukemias" = "Leukemias",
-        "Liver" = "Liver and Intrahepatic Bile Duct",
-        "Non-Hodgkin Lymphoma" = "Non-Hodgkin Lymphoma",
-        "Pancreas" = "Pancreas",
-        "Lung and Bronchus" = "Lung and Bronchus"
-      ),
-      selected = "Female Breast"
-    )
-  ),
-  mainPanel(plotOutput("racePlot")))
-)
-
+# Navbar lyaout
 ui <- navbarPage(
   theme = shinytheme("flatly"),
   "Washington State Cancer Analysis",
