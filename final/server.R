@@ -107,8 +107,7 @@ shinyServer(function(input, output) {
       list(
         src = "../images/countiesMap.gif",
         align = "center",
-        height = 500,
-        width = 850,
+
         alt = "WA Counties"
       )
     )

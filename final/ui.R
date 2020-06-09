@@ -26,9 +26,9 @@ page_one <- tabPanel(
                        rates and time, and the relationship between mortality rates
                        and race."
   ),
-  mainPanel(
+  fluidRow(
     align = "right",
-    imageOutput(outputId = "wacounties"),
+    imageOutput(outputId = "wacounties")),
     
     h2("Limitations"),
     p(
@@ -43,7 +43,8 @@ page_one <- tabPanel(
                      as cancer data continues to be updated. "
     )
   )
-)
+
+
 
 
 #page for maps
