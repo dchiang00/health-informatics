@@ -260,8 +260,7 @@ page_four <- tabPanel(
       selected = "Female Breast"
     )
   ),
-  mainPanel(plotOutput("racePlot")),
-  br())
+  mainPanel(plotOutput("racePlot")))
 )
 
 ui <- navbarPage(
