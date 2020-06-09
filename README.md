@@ -5,6 +5,7 @@
 ## Project Description
 
 View our final interactive web application at https://dchiang00.shinyapps.io/Washington-State-Cancer-Analysis/
+
 View our initial exploratory data analysis at https://dchiang00.github.io/health-informatics/eda/
 
 **What is the purpose of your research project?**
