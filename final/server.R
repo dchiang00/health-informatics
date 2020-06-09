@@ -103,6 +103,16 @@ shinyServer(function(input, output) {
   # Creates a chart using DT
   # Work cited https://rstudio.github.io/DT/shiny.html)
   output$raceHighest <- renderDT(highest, options = list(dom = "t"))
+  
+  output$wacounties <- renderImage({
+    return(list(
+    src="../images/countiesMap.gif",
+    align = "center",
+    height=500,
+    width=850,
+    alt = "WA Counties"
+  ))
+  },deleteFile = FALSE)})
                                  
-})
+
   
